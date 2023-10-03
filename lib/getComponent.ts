@@ -42,7 +42,9 @@ const getParsedModule = (code: any) => {
 const getComponent = async (name: string) => {
 
   // 根据name发请求获取组件打包后的代码 ，Promise模拟异步请求
-  const text = await Promise.resolve(button)
+  const text = await new Promise((resolve,reject)=>{
+    setTimeout(()=>{resolve(button)},500)
+  })
   // 得到text是一个组件的js代码，我们需要吧代码执行下，然后把得到 module.exports，这就是一个React FC  
   const module = getParsedModule(text)
   // 这个函数返回，需要有default属性 value为远程组件对象

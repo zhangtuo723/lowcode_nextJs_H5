@@ -18,7 +18,8 @@ export default function Page({ components }) {
 
     return (
         <div className={styles.root}>
-            <Suspense fallback={<>122</>}>
+            {/* ssr看不到这个loadin的效果 */}
+            <Suspense fallback={<>loading</>}>
                 {
                     pageComponent.map((item, index) => {
                         const { C, P } = item
