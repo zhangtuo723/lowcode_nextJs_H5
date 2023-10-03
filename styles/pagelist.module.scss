@@ -1,0 +1,21 @@
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    :global {
+
+        .content {
+            width: 100%;
+            background-color: pink;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+
+        }
+    }
+}
